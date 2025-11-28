@@ -1,18 +1,7 @@
  import React from "react";
  import ReactDOM from "react-dom/client";
- import "./style.css"
-  /**
-   * header
-     /logo
-     /nav items
-   * body
-     /search
-     /cardcontainer
-       'cards
-   * footer
-     /about
-     /contact
-   */
+ import "../style.css"
+  
   const Header=()=>{
     return(
       <div className="header">
@@ -155,7 +144,7 @@
       <div className="body">
         <div className="search">Search</div>
         <div className="card-container">
-          {toyList.map((ind)=>( <ToyCard toyData={ind}/> ))}
+          {toyList.map((item)=>( <ToyCard key={item.id}toyData={item}/> ))}
          
           
         </div>
