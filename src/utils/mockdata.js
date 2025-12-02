@@ -1,4 +1,4 @@
-const toyList = [
+let toyList = [
   {
     id: 1,
     name: "Lightning Buggy",
