@@ -7,7 +7,7 @@ import Shimmer from "./Shimmer";
 
 
 const Body=()=>{
-  const [toyListState,setToyListState]=useState(toyList)
+  const [toyListState,setToyListState]=useState([])
   useEffect(()=>{fetchData();},[]);
   const fetchData=async()=>{
 try {
@@ -21,11 +21,15 @@ setToyListState(json)
   
   
 }
-if(toyListState.length===0){ 
-  return <Shimmer/>
-}
+
   }
-    return(
+  
+  
+ return (toyListState.length===0) ? (
+  <Shimmer/>
+  )
+
+    :(
       <div className="body">
         <div className="filter">
           <button className="filter-btn" onClick={()=>{ let toyList2=toyListState.filter((item)=>Number(item.rating.rate)>=4.5);setToyListState(toyList2)}}>
