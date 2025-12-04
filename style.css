@@ -98,3 +98,26 @@ body{
   border-radius:5px;
   cursor:pointer;
 }
+.body
+.search-container{
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+.search-container input[type="text"] {
+  padding: 8px 30px 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.search-container .fa-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+.search-filter-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
